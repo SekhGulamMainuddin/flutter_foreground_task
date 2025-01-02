@@ -179,7 +179,7 @@ class BackgroundService: NSObject {
     }
   }
   
-  private func removeAllNotification() {
+  func removeAllNotification() {
     notificationCenter.removePendingNotificationRequests(withIdentifiers: [NOTIFICATION_ID])
     notificationCenter.removeDeliveredNotifications(withIdentifiers: [NOTIFICATION_ID])
   }
@@ -199,7 +199,7 @@ class BackgroundService: NSObject {
     foregroundTask?.update(taskEventAction: currForegroundTaskOptions.eventAction)
   }
   
-  private func destroyForegroundTask() {
+  func destroyForegroundTask() {
     foregroundTask?.destroy()
     foregroundTask = nil
   }
