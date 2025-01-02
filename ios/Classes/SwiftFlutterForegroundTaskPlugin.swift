@@ -176,10 +176,10 @@ public class SwiftFlutterForegroundTaskPlugin: NSObject, FlutterPlugin {
     queue.addOperation(operation)
   }
 
-  public static func stopService() {
-    BackgroundService.sharedInstance.destroyForegroundTask()
-    BackgroundService.sharedInstance.removeAllNotification()
-  }
+//  public static func stopService() {
+//    BackgroundService.sharedInstance.destroyForegroundTask()
+//    BackgroundService.sharedInstance.removeAllNotification()
+//  }
 }
 
 class AppRefreshOperation: Operation {

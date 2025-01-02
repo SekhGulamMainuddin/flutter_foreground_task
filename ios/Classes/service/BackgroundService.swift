@@ -93,6 +93,8 @@ class BackgroundService: NSObject {
         }
         break
       case .API_STOP, .APP_TERMINATE:
+
+  print("SEKH BRO DESTROY SERVICE CALLED APP_TERMINATE OR API_STOP")
         destroyForegroundTask()
         removeAllNotification()
         isRunningService = false
@@ -200,6 +202,7 @@ class BackgroundService: NSObject {
   }
   
   func destroyForegroundTask() {
+  print("SEKH BRO DESTROY SERVICE CALLED")
     foregroundTask?.destroy()
     foregroundTask = nil
   }
